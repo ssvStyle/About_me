@@ -2,3 +2,5 @@
 *img
 *nbproject
 *.ssv
+*.idea
+*.DS_Store
