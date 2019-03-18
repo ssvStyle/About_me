@@ -35,12 +35,10 @@
 			<h1 id="colorlib-logo"><a href="index.html">SSV<span>.</span></a></h1>
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
-                                    <li class="colorlib-active"><a href="index.php">Home</a></li>
-					<li><a href="photography.php">Photography</a></li>
-					<li><a href="travel.html">Travel</a></li>
-					<li><a href="fashion.html">Fashion</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
+                    <li class="colorlib-active"><a href="index.php">Главная</a></li>
+					<li><a href="photography.php">Галерея</a></li>
+					<li><a href="guestbook.php">Гостевая книга</a></li>
+					<li><a href="about.php">About</a></li>
 				</ul>
 			</nav>
 

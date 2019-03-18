@@ -6,4 +6,4 @@ use \app\classes\View;
 
 $test = new View();
 
-$test->display('photography');
+$test->display('guestbook');
