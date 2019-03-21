@@ -18,7 +18,7 @@ class GuestBook
     {
         
         $this->db = new DB();
-        $GBmsg = $this->db->query('SELECT DateTime, name, message FROM guestbook ORDER by DateTime DESC', []);
+        $GBmsg = $this->db->query('SELECT id, DateTime, name, message FROM guestbook ORDER by DateTime DESC', []);
         
         foreach ($GBmsg as $message){
             $this->allMessage[] = new Message($message);

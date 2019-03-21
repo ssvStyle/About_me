@@ -32,19 +32,29 @@
 	<div id="colorlib-page">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="index.html">SSV<span>.</span></a></h1>
+			<h1 id="colorlib-logo"><a href="index.php">SSV<span>.</span></a></h1>
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
                     <li class="colorlib-active"><a href="index.php">Главная</a></li>
 					<li><a href="photography.php">Галерея</a></li>
 					<li><a href="guestbook.php">Гостевая книга</a></li>
 					<li><a href="about.php">About</a></li>
+
+                 <?php //if (isset($_SESSION['admin'])) { ?>
+
+                    <li><a href="adminPanel.php">Админ панель</a></li>
+                    <li><a href="formHandlers/signOut.php">Выход</a></li>
+
+                 <?php //} else { ?>
+
+                     <li><a href="login.php">Войти</a></li>
+
+                  <?php //} ?>
+
 				</ul>
 			</nav>
 
 			<div class="colorlib-footer">
-				<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 				<ul>
 					<li><a href="#"><i class="icon-facebook"></i></a></li>
 					<li><a href="#"><i class="icon-twitter"></i></a></li>

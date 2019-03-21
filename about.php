@@ -1,9 +1,16 @@
 <?php
 
+session_start();
+
 include_once  __DIR__ . '/autoload.php';
 
 use \app\classes\View;
+use \app\models\DB;
 
-$test = new View();
+$db = new DB();
+$about = $db->query('SELECT text FROM about', []);
 
-$test->display('about');
+$view = new View();
+$view->assign('about', $about[0]['text']);
+
+$view->display('about');

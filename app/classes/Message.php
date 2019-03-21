@@ -34,4 +34,9 @@ class Message
     {
         return ['name' => $this->getName(), 'message' => $this->getMsg()];
     }
+
+    public function getId()
+    {
+        return $this->message['id'];
+    }
 }

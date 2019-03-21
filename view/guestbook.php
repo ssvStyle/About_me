@@ -1,5 +1,5 @@
 <div id="colorlib-main">
-    <div class="hero-wrap js-fullheight" style="background-image: url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap pb-3 pt-3" style="background-image: url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
             <div class="d-flex justify-content-center align-items-center">
             <div class="col-md-10 text">
@@ -7,21 +7,21 @@
 
                 <?php foreach ($data['guestbook']->getAllMsg() as $msgObj) {?>
 
-                    <div class="media border box my-1 pl-0 p-1">
-                         <img class="d-flex align-self-center mr-3 img-thumbnail" width="70px" src="/HomeWork/img/no-user-image.gif" alt="image">
+                <!--<div class="media border box my-1 pl-0 p-1">
+                     <img class="d-flex mr-3 img-thumbnail" width="70px" src="/HomeWork/img/no-user-image.gif" alt="image">-->
                          <div class="media-body">
                              <div class="row">
-                                 <h5 class="col flex-item-md-between mt-0 pt-0 text-info"><?php echo $msgObj->getName(); ?></h5>
-                                 <p class="col text-secondary flex-item-md-between text-right mt-0 pt-0 mb-0 text-muted"><small><?php echo $msgObj->getDate(); ?></small></p>
+                                 <h5 class="col flex-item-md-between mt-1 pt-1 text-info"><?php echo $msgObj->getName(); ?></h5>
+                                 <p class="col text-secondary flex-item-md-between text-right mt-1 pt-1 mb-0 text-muted"><small><?php echo $msgObj->getDate(); ?></small></p>
                              </div>
                              <?php echo $msgObj->getMsg(); ?>
+                             <hr>
                          </div>
-                    </div>
                 <?php } ?>
 
                 <form action="formHandlers/addGBmsg.php" method="POST" class="col-md-6 pl-0">
 
-                    <div class="form-group col-md-6 pl-0">
+                    <div class="form-group col-md-6 pl-0 pb-4">
                         <label for="formGroupExampleInput">Ваше имя</label>
                         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="You name" name="name">
                     </div>

@@ -7,4 +7,4 @@ include_once  __DIR__ . '/autoload.php';
 use \app\classes\View;
 
 $view = new View();
-$view->display('photography');
+$view->display('login');

@@ -1,9 +1,15 @@
 <?php
 
+session_start();
+
 include_once  __DIR__ . '/autoload.php';
 
 use \app\classes\View;
+use \app\models\DB;
 
-$test = new View();
+$db = new DB();
+$about = $db->query('SELECT text FROM about', []);
 
-$test->display('index');
+$view = new View();
+$view->assign('about', mb_substr($about[0]['text'],0, 130));
+$view->display('index');
