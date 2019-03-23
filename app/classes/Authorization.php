@@ -17,9 +17,9 @@ class Authorization
 
     public function __construct($login, $pass)
     {
-        $validationLoginPass = new Validation($login, $pass);
+        $validationLoginPass = new UserValidation($login, $pass);
 
-        if ($validationLoginPass->rezult()){
+        if ($validationLoginPass->getResult()){
         $this->login = $login;
         $this->pass = $pass;
         }

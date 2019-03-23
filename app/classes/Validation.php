@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: ssv
- * Date: 20.03.19
- * Time: 22:16
+ * Date: 23.03.19
+ * Time: 2:34
  */
 
 namespace app\classes;
@@ -11,10 +11,8 @@ namespace app\classes;
 
 class Validation
 {
-    private $rezult;
-
-    public function rezult()
+    protected function match(string $pattern, string $subject)
     {
-        return $this->rezult;
+        return (bool)(preg_match($pattern, $subject));
     }
 }
