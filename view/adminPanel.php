@@ -1,3 +1,4 @@
+<?php if (isset($_SESSION['Admin'])) {?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,9 +75,7 @@
                     </form>
                 </div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-
                     <?php foreach ($guestbookRecord->getAllMsg() as $msgObj) { ?>
-
                         <?php echo $msgObj->getDate(); ?> - <?php echo $msgObj->getMsg(); ?>
                         <form method="post" action="formHandlers/adminPanel.php">
                             <div class="form-group">
@@ -84,17 +83,16 @@
                                 <input type="submit" class="btn btn-primary mt-3" value="Удалить запись" name="deleteRec">
                             </div>
                         </form><hr>
-
                     <?php } ?>
                 </div>
             </div>
 
         </div>
     </div>
-
         <script src="js/utils.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
+<?php } ?>

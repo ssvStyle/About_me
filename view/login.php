@@ -18,7 +18,7 @@
 
                         <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="pass" required><br>
 
-                        <button class="btn btn-lg btn-primary btn-block" type="submit"  name="button" value="submit">Войти</button>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit"  name="signin" value="submit">Войти</button>
 
                     </form>
 

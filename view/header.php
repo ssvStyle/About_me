@@ -40,16 +40,16 @@
 					<li><a href="guestbook.php">Гостевая книга</a></li>
 					<li><a href="about.php">About</a></li>
 
-                 <?php //if (isset($_SESSION['admin'])) { ?>
+                 <?php if (isset($_SESSION['Admin'])) { ?>
 
                     <li><a href="adminPanel.php">Админ панель</a></li>
                     <li><a href="formHandlers/signOut.php">Выход</a></li>
 
-                 <?php //} else { ?>
+                 <?php } else { ?>
 
                      <li><a href="login.php">Войти</a></li>
 
-                  <?php //} ?>
+                  <?php } ?>
 
 				</ul>
 			</nav>

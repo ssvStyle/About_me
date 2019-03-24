@@ -5,11 +5,11 @@ use \PDO;
 
 include_once __DIR__ . '/../../config.php';
 /**
- * Description of DB
+ * Description of Db
  *
  * @author ssv
  */
-class DB
+class Db
 {
     protected $dbPdo;
 

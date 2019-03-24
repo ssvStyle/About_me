@@ -2,28 +2,16 @@
 
 session_start();
 
-include_once  __DIR__ . '/autoload.php';
+include_once __DIR__ . '/autoload.php';
 
 use app\classes\GuestBook;
-use app\models\DB;
-use app\classes\Admin;
-use app\classes\UserValidation;
-
-
-$db = new DB();
-$guestbookRecord = new GuestBook();
-
-$about = $db->query('SELECT text FROM about', []);
-
-include_once 'view/adminPanel.php';
+use app\models\Db;
 
 
 
-/***************************************************************************************************************/
+    $db = new Db();
+    $guestBookRecord = new GuestBook();
 
-$usValid = new UserValidation('ssv-style', '123456');
+    $about = $db->query('SELECT text FROM about', []);
 
-
-$user = $db->query('SELECT * FROM users WHERE id IN (SELECT admin FROM roles WHERE admin != 0)', []);
-//$user = $db->query('SELECT admin FROM roles WHERE admin != 0,[]);
-var_dump($usValid->getResult());
+    include_once 'view/adminPanel.php';

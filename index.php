@@ -5,9 +5,9 @@ session_start();
 include_once  __DIR__ . '/autoload.php';
 
 use \app\classes\View;
-use \app\models\DB;
+use \app\models\Db;
 
-$db = new DB();
+$db = new Db();
 $about = $db->query('SELECT text FROM about', []);
 
 $view = new View();

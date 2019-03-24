@@ -1,7 +1,7 @@
 <?php
 
 namespace app\classes;
-use app\models\DB;
+use app\models\Db;
 
 /**
  * Description of GuestBook
@@ -17,7 +17,7 @@ class GuestBook
     public function __construct()
     {
         
-        $this->db = new DB();
+        $this->db = new Db();
         $GBmsg = $this->db->query('SELECT id, DateTime, name, message FROM guestbook ORDER by DateTime DESC', []);
         
         foreach ($GBmsg as $message){

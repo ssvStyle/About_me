@@ -3,7 +3,7 @@
 namespace app\classes;
 
 
-class UserValidation extends Validation
+class LoginFormValidation extends Validation
 {
     private $login, $pass;
 

@@ -1,27 +1,26 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ssv
- * Date: 22.03.19
- * Time: 23:59
- */
 
 namespace app\classes;
+use app\models\Db;
 
 
-class Admin extends User
+class Admin
 {
-    private $id;
+    private $id, $secondName;
     protected $db;
 
-    public function __construct(DB $db)
+    public function __construct(array $userData)
     {
-        $this->db = $db;
+        //$this->db = new Db;
+        $this->id = $userData['id'];
+        $this->firstName = $userData['firstName'];
+        $this->secondName = $userData['secondName'];
+
     }
 
     public function saveTextAbout(string $about)
     {
-        $this->db->query('UPDATE about SET text='.htmlspecialchars($about).'WHERE id=0', []);
+        //$this->db->query('UPDATE about SET text='.htmlspecialchars($about).'WHERE id=0', []);
     }
 
     public function addImg(Upload $upload)
