@@ -10,7 +10,7 @@ class Message
 {
     protected $message = [];
 
-    public function __construct($msg)
+    public function __construct(array $msg)
     {
         $this->message = $msg;
     }
