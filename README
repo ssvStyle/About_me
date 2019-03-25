@@ -9,3 +9,15 @@ Database usage
 Personal site
 Sections: about me, photo gallery, guest book
 Admin panel: the ability to change the text "about me", add photos, delete entries from the guest book
+
+
+Важные требования к приложению, независимо от выбранного проекта:
+
+MVC
+Законченный внешний вид
+Использование базы данных
+
+Проекты на выбор:
+Персональный сайт
+	Разделы: обо мне, фотогалерея, гостевая книга
+	Админ-панель: возможность смены текста "обо мне", добавления фотографий, удаления записей из гостевой книги

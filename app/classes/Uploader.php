@@ -29,7 +29,7 @@ class Uploader
 
         if ($this->isUploaded()){
 
-            $result = move_uploaded_file($this->file['tmp_name'], '/opt/lampp/htdocs/HomeWork/img/gallery/' . $this->file['name']);
+            $result = move_uploaded_file($this->file['tmp_name'], __DIR__ . '/../../images/gallery/' . $this->file['name']);
 
         }
 

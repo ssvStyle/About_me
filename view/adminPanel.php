@@ -1,4 +1,3 @@
-<?php if (isset($_SESSION['Admin'])) {?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +22,10 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/utils.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 </head>
     <body>
@@ -60,8 +63,8 @@
                     <form  method="post" action="formHandlers/adminPanel.php">
                         <div class="row">
                             <div class="col-xs-12 col-md-12">
-                                <textarea  rows="14" class="form-control" name="message"><?php echo $about[0]['text']; ?></textarea>
-                                <input type="submit" class="btn btn-primary mt-3" value="Сохранить">
+                                <textarea  rows="12" class="form-control" name="message"><?php echo $about[0]["text"]; ?></textarea>
+                                <input type="submit" class="btn btn-primary mt-3" value="Сохранить" name="updateTextAbout">
                             </div>
                         </div>
                     </form>
@@ -75,24 +78,26 @@
                     </form>
                 </div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                    <?php foreach ($guestbookRecord->getAllMsg() as $msgObj) { ?>
+
+                    <?php foreach ($guestBookRecord->getAllMsg() as $msgObj) { ?>
+
                         <?php echo $msgObj->getDate(); ?> - <?php echo $msgObj->getMsg(); ?>
+
                         <form method="post" action="formHandlers/adminPanel.php">
                             <div class="form-group">
                                 <input type="hidden" class="form-control-file" name="id" value="<?php echo $msgObj->getId(); ?>" id="exampleFormControlFile1">
                                 <input type="submit" class="btn btn-primary mt-3" value="Удалить запись" name="deleteRec">
                             </div>
-                        </form><hr>
+                        </form>
+                        <hr>
+
                     <?php } ?>
+
                 </div>
             </div>
 
         </div>
     </div>
-        <script src="js/utils.js"></script>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+
     </body>
 </html>
-<?php } ?>

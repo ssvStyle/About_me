@@ -9,7 +9,7 @@ use app\classes\Authorization;
 if (isset($_POST['signin'])){
     $formValidation = new LoginFormValidation($_POST["login"], $_POST["pass"]);
         if ($formValidation->getResult()){
-            $auth = new Authorization($_POST["login"], $_POST["pass"]);
+            $auth = new Authorization($formValidation);
             $auth->activateSession();
             header('location: /exam.loc/adminPanel.php');
         }

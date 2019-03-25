@@ -19,7 +19,7 @@
                          </div>
                 <?php } ?>
 
-                <form action="formHandlers/addGBmsg.php" method="POST" class="col-md-6 pl-0">
+                <form action="formHandlers/addGbMsg.php" method="POST" class="col-md-6 pl-0">
 
                     <div class="form-group col-md-6 pl-0 pb-4">
                         <label for="formGroupExampleInput">Ваше имя</label>

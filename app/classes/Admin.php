@@ -1,35 +1,39 @@
 <?php
 
 namespace app\classes;
+
+include __DIR__ . '/../../autoload.php';
+
 use app\models\Db;
 
 
 class Admin
 {
-    private $id, $secondName;
-    protected $db;
+    private $id, $firstName, $secondName, $db;
+    protected $adminPanel;
 
     public function __construct(array $userData)
     {
-        //$this->db = new Db;
+        $this->adminPanel = new AdminForm();
         $this->id = $userData['id'];
         $this->firstName = $userData['firstName'];
         $this->secondName = $userData['secondName'];
+        $this->db = new Db();
 
     }
 
     public function saveTextAbout(string $about)
     {
-        //$this->db->query('UPDATE about SET text='.htmlspecialchars($about).'WHERE id=0', []);
+        $this->adminPanel->updateTextAbout($about);
     }
 
-    public function addImg(Upload $upload)
+    public function addImg()
     {
-        //$upload->save();
+        $this->adminPanel->uploadImg();
     }
 
-    public function delGuestBookMsg(int $id)
+    public function delGuestBookMsg($id)
     {
-        //$this->db->query('DELETE FROM guestbook WHERE id='.$id, []);
+        $this->adminPanel->delRecFromGuestBook($id);
     }
 }

@@ -23,6 +23,16 @@ class LoginFormValidation extends Validation
         return $this->match('~^.{3,15}$~', $this->pass);
     }
 
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    public function getPass()
+    {
+        return $this->pass;
+    }
+
     public function getResult()
     {
         if ($this->checkLogin() && $this->checkPass()){

@@ -17,18 +17,21 @@ class Authorization
     private $user = [];
     private $db;
 
-    public function __construct($login, $pass)
+    public function __construct(loginFormValidation $loginFormValidation)
     {
         $this->db = new Db();
-        $this->login = $login;
-        $this->pass = $pass;
+        $this->login = $loginFormValidation->getLogin();
+        $this->pass = $loginFormValidation->getPass();
         $this->user = $this->userExist();
     }
 
     public function activateSession()
     {
         if ($this->userExistAndPassValid()){
-            $_SESSION['Admin'] = new Admin($this->user);
+            $_SESSION['Admin']['id'] = $this->user['id'];
+            $_SESSION['Admin']['login'] = $this->user['login'];
+            $_SESSION['Admin']['firstName'] = $this->user['firstName'];
+            $_SESSION['Admin']['secondName'] = $this->user['secondName'];
         }
     }
 
