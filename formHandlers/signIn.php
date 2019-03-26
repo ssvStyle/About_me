@@ -11,8 +11,9 @@ if (isset($_POST['signin'])){
         if ($formValidation->getResult()){
             $auth = new Authorization($formValidation);
             $auth->activateSession();
+            var_dump($_SESSION);
             header('location: /exam.loc/adminPanel.php');
+        } else {
+            header('location: /exam.loc/login.php');
         }
-} else {
-    header('location: /exam.loc');
 }

@@ -1,12 +1,12 @@
 <div id="colorlib-main">
-    <div class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(images/bg_4.jpg);" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="js-fullheight d-flex justify-content-center align-items-center">
             <div class="col-md-8 text text-center">
                 <div class="img mb-4" style="background-image: url(images/author.jpg);"></div>
                 <div class="desc">
                     <h2 class="subheading">Hello I'm</h2>
-                    <h1 class="mb-4">Elen Henderson</h1>
+                    <h1 class="mb-4">Sergey Simonov</h1>
                     <p class="mb-4"><?php echo $data['about']; ?></p>
                     <ul class="ftco-social mt-3">
                         <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
