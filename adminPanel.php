@@ -5,13 +5,11 @@ session_start();
 include_once __DIR__ . '/autoload.php';
 
 use app\classes\GuestBook;
-use app\models\Db;
+use app\classes\Content;
 
 if (isset($_SESSION['Admin'])) {
-    $db = new Db();
     $guestBookRecord = new GuestBook();
-
-    $about = $db->query('SELECT text FROM about', []);
+    $content = new Content();
 
     include_once __DIR__ . '/view/adminPanel.php';
 } else {

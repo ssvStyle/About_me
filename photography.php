@@ -5,13 +5,14 @@ session_start();
 include_once  __DIR__ . '/autoload.php';
 
 use \app\classes\View;
-
-$imgList = array_diff(scandir('images/gallery'), ['..', '.']);
+use \app\classes\Content;
 
 $view = new View();
-$view->assign('imgList', $imgList);
+$content = new Content();
 
-if (isset($_GET['img']) && $_GET['img'] <= count($imgList)+1){
+$view->assign('content', $content);
+
+if (isset($_GET['img']) && $_GET['img'] <= count($content->getImgList())+1){
 
     $view->display('photo');
 

@@ -64,7 +64,7 @@
                     <form  method="post" action="formHandlers/adminPanel.php">
                         <div class="row">
                             <div class="col-xs-12 col-md-12">
-                                <textarea  rows="12" class="form-control" name="message"><?php echo $about[0]["text"]; ?></textarea>
+                                <textarea  rows="12" class="form-control" name="message"><?php echo $content->getTextAbout() ?></textarea>
                                 <input type="submit" class="btn btn-primary mt-3" value="Сохранить" name="updateTextAbout">
                             </div>
                         </div>

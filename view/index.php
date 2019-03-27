@@ -7,7 +7,7 @@
 						<div class="desc">
 							<h2 class="subheading">Hello I'm</h2>
 							<h1 class="mb-4">Sergey Simonov</h1>
-							<p class="mb-4"><?php echo $data['about'];?></p>
+							<p class="mb-4"><?php echo $data['content']->getShortTextAbout();?></p>
 							<p><a href="about.php" class="btn-custom">More About Me <span class="ion-ios-arrow-forward"></span></a></p>
 						</div>
 					</div>
